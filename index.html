@@ -46,7 +46,7 @@ layout: default
 			{% for artist in site.artists  %}
 				<article class="artist">
 					<div class="artist-image">
-						<img src="{{artist.thumb}}" alt="">
+						<img src="{{ site.baseurl }}{{artist.thumb}}" alt="">
 					</div>
 					<div class="artist-infos">
 						<h2 class="artist-name">{{artist.title}}</h2>
@@ -58,7 +58,7 @@ layout: default
 							<li>The big brother</li>
 							<li>Mandolune</li>
 						</ul>
-						<a href="{{artist.url}}" class="artist-link">zum Künstler</a>
+						<a href="{{ site.baseurl }}{{artist.url}}" class="artist-link">zum Künstler</a>
 					</div>
 				</article>
 			{% endfor %}
