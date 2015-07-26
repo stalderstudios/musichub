@@ -3,7 +3,7 @@
 <head>
   <meta charset=utf-8 />
   <title> {% if page.title %} {{ page.title }} | {% endif %} Music Hub </title>
-  <link rel="stylesheet" href="/css/app.css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/app.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 </head>
 <body class="inv-banner-off">
@@ -15,10 +15,10 @@
         <div class="site-description">Die musikalische Familie</div>
         <nav role="navigation">
           <ul>
-            <li><a href="/">Künstler & Projekte</a></li>
-            <li><a href="/musik">Musik</a></li>
-            <li><a href="/news">News</a></li>
-            <li><a href="/kontakt">Kontakt</a></li>
+            <li><a href="{{ site.baseurl }}/">Künstler & Projekte</a></li>
+            <li><a href="{{ site.baseurl }}/musik">Musik</a></li>
+            <li><a href="{{ site.baseurl }}/news">News</a></li>
+            <li><a href="{{ site.baseurl }}/kontakt">Kontakt</a></li>
           </ul>
         </nav>
       </div>
