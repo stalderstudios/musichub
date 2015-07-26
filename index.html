@@ -6,18 +6,24 @@ layout: default
 		<i class="section-icon fa fa-music"></i>
 		<h2 class="section-title">Musik Demo</h2>
 		<div class="section-subtitle audio-title">TuneWest • Reunion Medley</div>
-		<div class="audio-player">{{Auto PLayer}}</div>
+		<div class="section-content audio-player">
+			<audio controls>
+			 	<source src="{{site.baseurl}}/audio/medley.mp3" type="audio/mp3">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
 	</div>
 </section>
 <section class="site-section section-stickynews">
 	<div class="section-container">
 		<i class="section-icon fa fa-comment"></i>
 		<h2 class="section-title">Neuste Meldung</h2>
-		<div class="section-subtitle post-date">December 31, 2013</div>
-		<article class="post">
-			<img src="#" alt="" class="post-thumb">
-			<h3 class="post-title"></h3>
-			<a href="#" class="post-btn">zum Eintrag</a>
+		{% assign post = site.posts.first %}
+		<div class="section-subtitle post-date">{{post.date | date: '%d.%m.%Y'}}</div>
+		<article class="section-content post">
+			<img width="50" height="50" src="{{site.baseurl}}{{post.image}}-100x100.jpg" alt="" class="post-thumb">
+			<h3 class="post-title">{{post.title}}</h3>
+			<a href="#">zum Eintrag</a>
 		</article>
 	</div>
 </section>
@@ -25,13 +31,13 @@ layout: default
 <section class="site-section section-homeintro">
 	<div class="section-container">
 		<h1 class="section-title"><strong>Music Hub</strong> ist ein Gemeinschaftsportal einer Musikfamilie und deren Musikprojekten.</h1>
-		<ul class="section-keywords">
-			<li>Jazz</li>
-			<li>Blues</li>
-			<li>Country</li>
-			<li>Folk</li>
-			<li>Pop</li>
-			<li>Rock</li>
+		<ul class="section-keywords fa-ul">
+			<li><i class="fa-li fa fa-check"></i>Jazz</li>
+			<li><i class="fa-li fa fa-check"></i>Blues</li>
+			<li><i class="fa-li fa fa-check"></i>Country</li>
+			<li><i class="fa-li fa fa-check"></i>Folk</li>
+			<li><i class="fa-li fa fa-check"></i>Pop</li>
+			<li><i class="fa-li fa fa-check"></i>Rock</li>
 		</ul>
 		<p>Da die Familie in so vielen Musikprojekten teilnimmt, ist es oft schwierig für Interessenten die verschiedenen Angebote zu entdecken. Das Portal ermöglicht eine verbesserte Informationstransparenz.</p>
 		<p>Die Miglieder haben in verschiedenen Musikalischen Stielrichtungen ihre stärken entwickelt.</p>

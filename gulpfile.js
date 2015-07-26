@@ -12,6 +12,8 @@ var del = require('del');
 var imagemin = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
 var spawn = require('gulp-spawn');
+var imageResize = require('gulp-image-resize');
+var rename = require('gulp-rename');
 //var livereload = require('gulp-livereload');
 
 var env = process.env.NODE_ENV || 'production';
@@ -105,6 +107,40 @@ gulp.task('images', function() {
     .pipe(imagemin({optimizationLevel: 5}))
     .pipe(gulp.dest('./img'))
     //.on('end', jekyll)
+  ;
+});
+
+gulp.task('media-images', function() {
+  gulp.src('src/media-img/**/*')
+    .pipe(imageResize({
+      width : 50,
+      height : 50,
+      crop : true,
+      upscale : false,
+      format : 'jpg',
+      imageMagick: true
+    }))
+    .pipe(rename(function (path) {
+      path.basename += "-50x50";
+    }))
+    .pipe(imagemin({optimizationLevel: 5}))
+    .pipe(gulp.dest('./media-img'))
+  ;
+
+  gulp.src('src/media-img/**/*')
+    .pipe(imageResize({
+      width : 100,
+      height : 100,
+      crop : true,
+      upscale : false,
+      format : 'jpg',
+      imageMagick: true
+    }))
+    .pipe(rename(function (path) {
+      path.basename += "-100x100";
+    }))
+    .pipe(imagemin({optimizationLevel: 5}))
+    .pipe(gulp.dest('./media-img'))
   ;
 });
 
