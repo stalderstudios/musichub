@@ -111,17 +111,31 @@
 	.container;	
 }
 
-.vertical-center{
+.bg-dark{
+	background-color: #333;
+	background-image: url("../img/bg-gray-dark.jpeg");
+	z-index: 1;
 	position: relative;
-  	top: 50%;
-  	transform: translateY(-50%);
+	&:after{
+		content: "";
+		z-index: -1;
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		right: 0px;
+		left: 0px;
+		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)); 
+	}
+	color: white;
 }
 
 .site-header{
+	.bg-dark;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	position: relative;
-	background-color: #eee;
+	a{
+		color: white;
+	}
 	nav{
 		position: absolute;
 		right: @grid-gutter-width/2;
@@ -129,7 +143,7 @@
 			.nav;
 			.nav-pills;
 			a{
-				color: black;
+				color: white;
 				&:hover{
 					background-color: #ddd;
 				}
@@ -137,13 +151,14 @@
 		}
 	}
 }
-
+.site-header-container{
+	position: relative;
+}
 .site-name{
 	float:left;
 	font-size: 50px;
 	font-weight: bold;
 }
-
 .site-description{
 	float:left;
 	clear:left;
@@ -166,7 +181,73 @@
 	}
 }
 
+.section-musicdemo,
+.section-stickynews{
+	height: 70px;
+	.section-container{
+		position: relative;	
+	}
+	.section-icon{
+		float:left;
+		.fa-3x;
+		.fa-fw;
+		line-height:  70px;
+		width: 70px;
+		text-align: center;
+		//border-left: 1px solid rgba(0,0,0,0.2);
+		//border-right: 1px solid rgba(0,0,0,0.2);
+		background-color: rgba(0,0,0,0.1);
+		margin-right: 15px;
+		color: rgba(0,0,0,0.6);
+	} 
+	.section-title{
+		margin: 0px;
+		margin-top: 10px;
+		line-height: 30px;
+		font-size: 25px;
+		width: 350px;
+	}
+	.section-subtitle{
+		margin-bottom: 10px;
+		line-height: 20px;
+		font-size: 14px;
+		width: 350px;
+		color: rgba(0,0,0,0.6);
+	}
+}
 
+.section-musicdemo{
+	background-color: #b0d2b2;
+	background-image: url("../img/bg-lightgreen.png");
+	border-bottom: 1px solid lighten(#b0d2b2, 10%);
+	.audio-player{
+		//background-color: black;
+		height: 70px;
+		line-height: 70px;
+		width: @container-large-desktop - 350px - @grid-gutter-width;
+		position: absolute;
+		right: @grid-gutter-width/2;
+		top:0px;
+		&:after{
+			content: "Audio Player";
+		}
+	}
+}
+
+.section-stickynews{
+	background-color: #7798eb;
+	background-image: url("../img/bg-blue.png"); 
+	border-bottom: 1px solid lighten(#7798eb, 10%);
+	color: black;
+	.post{
+		//background-color: black;
+		height: 70px;
+		width: @container-large-desktop - 350px - @grid-gutter-width;
+		position: absolute;
+		right: @grid-gutter-width/2;
+		top:0px;
+	}
+}
 .section-artists{
 	.artist{
 		width: 200px;
