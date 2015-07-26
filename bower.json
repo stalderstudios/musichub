@@ -1,0 +1,30 @@
+{
+  "name": "Prestige Home",
+  "description": "Real-Estate Portal for luxury properties.",
+  "version": "0.0.0",
+  "homepage": "http://prestigehome.ch",
+  "license": "none",
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+    "fontawesome": "*"
+  },
+  "authors": [
+    "Jens Stalder <jensstalder@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "zf2"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+  }
+}

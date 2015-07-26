@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{
+			"path": "src"
+		},
+		{
+            "path": ".",
+            "folder_exclude_patterns": [
+            	"_site", 
+            	"bower_components", 
+            	"css", 
+            	"fonts", 
+            	"img", 
+            	"js", 
+            	"node_modules", 
+            	"src"
+            ]
+        }
+	]
+}

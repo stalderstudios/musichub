@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title> {% if page.title %} {{ page.title }} | {% endif %} Music Hub </title>
+  <link rel="stylesheet" href="/css/app.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+</head>
+<body class="inv-banner-off">
+ 
+  <div id="main">
+    <header class="site-header">
+      <div class="site-header-container">
+        <div class="site-name"><a href="/">Music Hub</a></div>
+        <div class="site-description">Die musikalische Familie</div>
+        <nav role="navigation">
+          <ul>
+            <li><a href="/">Künstler & Projekte</a></li>
+            <li><a href="/musik">Musik</a></li>
+            <li><a href="/news">News</a></li>
+            <li><a href="/kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    {{ content }}
+ 
+    <footer class="site-footer">
+      <div class="site-footer-container">
+        <p>® Tune West 2015 | All Rights Reserved. </p>
+      </div>
+    </footer>
+ 
+  </div>
+
+  <script src="/js/assets.min.js"></script>
+  <script src="/js/main.min.js"></script>
+</body>
+</html>

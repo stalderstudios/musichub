@@ -1,0 +1,116 @@
+---
+layout: default
+---
+<section class="site-section section-musicdemo">
+	<div class="section-container">
+		<i class="section-icon fa fa-music"></i>
+		<h2 class="section-title">Musik Demo</h2>
+		<div class="audio-title">TuneWest • Reunion Medley</div>
+		<div class="audio-player">{{Auto PLayer}}</div>
+	</div>
+</section>
+<section class="site-section section-stickynews">
+	<div class="section-container">
+		<i class="section-icon fa fa-comment"></i>
+		<h2 class="section-title">Neuste Meldung</h2>
+		<div class="post-date">December 31, 2013</div>
+		<article class="post">
+			<img src="#" alt="" class="post-thumb">
+			<h3 class="post-title"></h3>
+			<a href="#" class="post-btn">zum Eintrag</a>
+		</article>
+	</div>
+</section>
+
+<section class="site-section section-homeintro">
+	<div class="section-container">
+		<h1 class="section-title"><strong>Music Hub</strong> ist ein Gemeinschaftsportal einer Musikfamilie und deren Musikprojekten.</h1>
+		<ul class="section-keywords">
+			<li>Jazz</li>
+			<li>Blues</li>
+			<li>Country</li>
+			<li>Folk</li>
+			<li>Pop</li>
+			<li>Rock</li>
+		</ul>
+		<p>Da die Familie in so vielen Musikprojekten teilnimmt, ist es oft schwierig für Interessenten die verschiedenen Angebote zu entdecken. Das Portal ermöglicht eine verbesserte Informationstransparenz.</p>
+		<p>Die Miglieder haben in verschiedenen Musikalischen Stielrichtungen ihre stärken entwickelt.</p>
+		<p>Auf Music Hub finden aber alle wieder zu den Wurzeln des Bluegrass-Gospels zurück.</p>
+	</div>
+</section>
+
+<section class="site-section section-artists">
+	<div class="section-container">
+		<h1 class="section-title">Musik Künstler</h1>
+		<div class="artists">
+			{% for artist in site.artists  %}
+				<article class="artist">
+					<div class="artist-image">
+						<img src="{{artist.thumb}}" alt="">
+					</div>
+					<div class="artist-infos">
+						<h2 class="artist-name">{{artist.title}}</h2>
+						<ul class="artist-keywords">
+							<li>Pianobauer</li>
+							<li>Piano</li>
+							<li>Musiklehrer</li>
+							<li>Guitar</li>
+							<li>The big brother</li>
+							<li>Mandolune</li>
+						</ul>
+						<a href="{{artist.url}}" class="artist-link">zum Künstler</a>
+					</div>
+				</article>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section class="site-section section-projects">
+	<div class="section-container">
+		<h1 class="section-title">Musik Projekte</h1>
+		<div class="projects">
+			<article class="project">
+				<div class="project-image">
+					<img src="#" alt="">
+				</div>
+				<h2 class="project-name">Tune West <small>Bluegrass Country Music Band</small></h2>
+
+				<ul class="project-keywords">
+					<li>Pianobauer</li>
+					<li>Piano</li>
+					<li>Musiklehrer</li>
+					<li>Guitar</li>
+					<li>The big brother</li>
+					<li>Mandolune</li>
+				</ul>
+
+				<a href="#" class="project-link">zum Projekt</a>
+			</article>
+		</div>
+	</div>
+</section>
+
+<section class="site-section section-quickcontact">
+	<div class="section-container">
+		<h1 class="section-title">Kontakt</h1>
+		<div class="section-description">
+			<p>Wir spielen regelmäßig an Öffentliche Anlässe, Firmenfeste, Familienfeste, und Hochzeiten. Ziel ist es dort ein möglichst unkompliziertes, Qualität-umfangreiches und individuelles Erlebnis den Zuschauern zu ermöglichen.</p>
+			<p>Melden Sie sich hier an falls Sie solch eine Band für Ihren Anlass benötigen oder ganz einfache eine Frage stellen möchten. Preise, Auftrittslänge, und Anlagen können wir dann individuell besprechen.</p>
+			<address>
+				<strong>Marianne Wurr</strong><br>
+				Weitegasse 17<br>
+				9320 Arbon<br>
+				<abbr title="Telefon">T:</abbr> +41 79 390 84 72
+			</address>
+			<address>
+			 	<strong>Email</strong><br>
+			 	<a href="mailto:mariannewurr@gmail.com">mariannewurr@gmail.com</a>
+			</address>
+
+			<a href="https://jensstalder.wufoo.com/forms/contact-form/" class="btn-contact">Jetzt Kontaktieren</a>
+
+
+		</div>
+	</div>
+</section>

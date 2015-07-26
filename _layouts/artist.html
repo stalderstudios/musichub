@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<section class="site-section section-artist">
+  <div class="section-container">
+
+    <h2>{{page.name}}</h2>
+     
+    <img src="{{ page.image }}" />
+     
+    {{ content }}
+
+    {% capture artists %}{{page.collection}}{% endcapture %}
+      {% if page.collection %}
+        {% assign  document = site[artists]  %}
+      {% endif %}
+    {% for links in document  %}
+      {% if links.title == page.title %}
+        {% unless forloop.first %}
+          {% assign prevurl = prev.url %}
+          {% assign prevtitle = prev.title %}
+        {% endunless %}
+        {% unless forloop.last %}
+          {% assign next = document[forloop.index] %}
+          {% assign nexturl = next.url %}
+          {% assign nexttitle = next.title %}
+        {% endunless %}
+      {% endif %}
+      {% assign prev = links %}
+    {% endfor %}
+     
+    <script>
+    document.body.onkeyup = function(e){
+    if (e.keyCode == '37') { window.location = '{{prevurl}}'; }
+    if (e.keyCode == '39') { window.location = '{{nexturl}}'; }
+    };
+    </script>
+    <nav>
+      <ul class="site-pager">
+        {% if prevurl %}<li class="previous"><a href="{{prevurl}}"><span aria-hidden="true"><i class="fa fa-chevron-left"></i></span> {{prevtitle}}</a></li>{% endif %}
+        {% if nexturl %}<li class="next"><a href="{{nexturl}}">{{nexttitle}} <span aria-hidden="true"><i class="fa fa-chevron-right"></i></span></a></li>{% endif %}
+      </ul>
+    </nav>     
+  </div>
+</div>

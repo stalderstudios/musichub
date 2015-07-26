@@ -1,0 +1,15 @@
+---
+exclude: ["src/**/*", "musichub.sublime-project", "musichub.sublime-workspace", "README.md", "node_modules", "package.json", "gulpfile.js", "bower.json", ".gitignore", ".DS_Store", ".bowerrc", "bower_components/*"]
+source: "."
+keep_files: []
+collections: 
+  artists:
+    output: true
+    permalink: /musiker/:path/
+defaults:
+  -
+    scope:
+      path: ""
+      type: artists
+    values:
+      layout: artist
