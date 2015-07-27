@@ -18,4 +18,12 @@ $(function() {
     });
   }
 
+  var $projects = $('.projects .project');
+  if ($projects.length) {
+    $projects.click(function(event) {
+      var href = $(this).find('a').prop('href');
+      window.location = href;
+    });
+  }
+
 });

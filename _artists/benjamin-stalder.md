@@ -1,7 +1,6 @@
 ---
 title: Benjamin Stalder
-image: /img/musiker/benjamin-stalder-sq-400.jpeg
-thumb: /img/musiker/benjamin-stalder-sq-400.jpeg
+image: /img/musiker/benjamin-stalder
 ---
 
 ## Biografie

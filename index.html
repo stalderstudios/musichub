@@ -21,7 +21,9 @@ layout: default
 		{% assign post = site.posts.first %}
 		<div class="section-subtitle post-date">{{post.date | date: '%d.%m.%Y'}}</div>
 		<article class="section-content post">
-			<img width="50" height="50" src="{{site.baseurl}}{{post.image}}-100x100.jpg" alt="" class="post-thumb">
+			<picture width="50" height="50">
+				<img width="50" height="50" srcset="{{site.baseurl}}{{post.image}}-50x50.jpg 1x, {{site.baseurl}}{{post.image}}-100x100.jpg 2x" src="{{site.baseurl}}{{post.image}}-50x50.jpg" alt="{{post.title}}">
+			</picture>
 			<h3 class="post-title">{{post.title}}</h3>
 			<a href="#">zum Eintrag</a>
 		</article>
@@ -52,7 +54,9 @@ layout: default
 			{% for artist in site.artists  %}
 				<article class="artist">
 					<div class="artist-image">
-						<img src="{{ site.baseurl }}{{artist.thumb}}" alt="">
+						<picture width="200" height="200">
+							<img width="200" height="200" srcset="{{site.baseurl}}{{artist.image}}-sq-200.jpeg 1x, {{site.baseurl}}{{artist.image}}-sq-400.jpeg 2x" src="{{site.baseurl}}{{artist.image}}-sq-200.jpeg" alt="{{artist.title}}">
+						</picture>
 					</div>
 					<div class="artist-infos">
 						<h2 class="artist-name">{{artist.title}}</h2>
@@ -80,18 +84,17 @@ layout: default
 				<div class="project-image">
 					<img src="#" alt="">
 				</div>
-				<h2 class="project-name">Tune West <small>Bluegrass Country Music Band</small></h2>
+				<div class="project-infos">
+					<h2 class="project-name">Tune West <small>Bluegrass Country Music Band</small></h2>
 
-				<ul class="project-keywords">
-					<li>Pianobauer</li>
-					<li>Piano</li>
-					<li>Musiklehrer</li>
-					<li>Guitar</li>
-					<li>The big brother</li>
-					<li>Mandolune</li>
-				</ul>
+					<ul class="project-keywords">
+						<li>Bluegrass</li>
+						<li>Family</li>
+						<li>Reunion</li>
+					</ul>
 
-				<a href="#" class="project-link">zum Projekt</a>
+					<a href="{{site.baseurl}}/projekte/tunewest" class="project-link">zum Projekt</a>
+				</div>
 			</article>
 		</div>
 	</div>

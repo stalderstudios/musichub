@@ -1,7 +1,6 @@
 ---
 title: Jens Stalder
-image: /img/musiker/jens-stalder-sq-400.jpg
-thumb: /img/musiker/jens-stalder-sq-400.jpg
+image: /img/musiker/jens-stalder
 ---
 
 Biografie

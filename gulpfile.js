@@ -24,19 +24,19 @@ var paths = {
     'src/js/app.js'
   ],
   fonts: [
-  	'src/bower_components/bootstrap/fonts/*',
-  	'src/bower_components/fontawesome/fonts/*'
+  	'bower_components/bootstrap/fonts/*',
+  	'bower_components/fontawesome/fonts/*'
   ],
   less: 'src/less/app.less',
   vendor_scripts: [
-    'src/bower_components/simpleStorage/simpleStorage.js',
-    'src/bower_components/jquery/dist/jquery.min.js',
-    'src/bower_components/bootstrap/dist/js/bootstrap.min.js'
+    'bower_components/simpleStorage/simpleStorage.js',
+    'bower_components/jquery/dist/jquery.min.js',
+    'bower_components/bootstrap/dist/js/bootstrap.min.js'
   ],
   images: [
     'src/img/**/*',
     '!src/img_bucket/**',
-    '!src/bower_components/**'
+    '!bower_components/**'
   ],
   copy: [
     'src/.htaccess',
@@ -59,9 +59,11 @@ gulp.task('bower', function() {
 });
 
 gulp.task('copy', function() {
-    gulp.src(paths.copy).pipe(gulp.dest('.'))
-      //.on('end', jekyll)
-    ;
+    gulp.src(paths.copy).pipe(gulp.dest('.'));
+
+    gulp.src('bower_components/picturefill/dist/picturefill.min.js').pipe(gulp.dest('./js/'));
+
+    gulp.src('src/js/modernizr.min.js').pipe(gulp.dest('./js/'));
 
 });
 
@@ -76,7 +78,6 @@ gulp.task('less', function() {
         'rebase' : false
       }))
       .pipe(gulp.dest('./css'))
-      //.on('end', jekyll)
     ;
 
 });
@@ -85,7 +86,6 @@ gulp.task('js_assets', function() {
 	gulp.src(paths.vendor_scripts)
     .pipe(concat('assets.min.js'))
     .pipe(gulp.dest('./js'))
-    //.on('end', jekyll)
   ;
 });
 
@@ -98,7 +98,6 @@ gulp.task('js', function() {
     .pipe(uglify())
     .pipe(concat('main.min.js'))
     .pipe(gulp.dest('./js'))
-    //.on('end', jekyll)
   ;
 });
 
@@ -106,7 +105,6 @@ gulp.task('images', function() {
   gulp.src(paths.images)
     .pipe(imagemin({optimizationLevel: 5}))
     .pipe(gulp.dest('./img'))
-    //.on('end', jekyll)
   ;
 });
 
@@ -147,7 +145,6 @@ gulp.task('media-images', function() {
 gulp.task('fonts', function() {
 	gulp.src(paths.fonts)
     .pipe(gulp.dest('./fonts'))
-    //.on('end', jekyll)
   ;
 
 });

@@ -1,7 +1,6 @@
 ---
 title: Marianne Wurr
-image: /img/musiker/marianne-wurr-sq-400.jpeg
-thumb: /img/musiker/marianne-wurr-sq-400.jpeg
+image: /img/musiker/marianne-wurr
 ---
 
 ## Biografie
