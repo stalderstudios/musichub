@@ -1,7 +1,7 @@
 ---
 exclude: ["src/**/*", "musichub.sublime-project", "musichub.sublime-workspace", "README.md", "node_modules", "package.json", "gulpfile.js", "bower.json", ".gitignore", ".DS_Store", ".bowerrc", "bower_components/*"]
 keep_files: []
-baseurl: /musichub
+baseurl: 
 collections: 
   artists:
     output: true
