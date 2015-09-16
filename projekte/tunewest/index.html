@@ -2,10 +2,65 @@
 layout: default
 title: CasaGateway
 published: true
+artists: ["Benjamin Stalder", "Jens Stalder"]
 ---
 
-<div class="container">
-  <h1>Tune West</h1>
-  <p class="lead">Tune West is a <strong>bluegrass</strong>, <strong>country</strong> and american <strong>folk</strong> family band.</p>
-  <p>Yes it sure is.</p>
-</div>
+<section class="site-section">
+	<div class="section-container">
+		<h1>Tune West Band</h1>
+		<p class="lead">Die Back to the roots Familienband die mit akustischen Instrumenten musiziert und für eine echte Western-Stimmung sorgt.</p>
+		<h2>Oldtime Country</h2>
+		<p>Die Musik ist so vielfältig wie ihre musikalischen Künstler, von Eigenkompositionen bis zu traditionellen Songs. Folk, Blues, Western and Old time Country.</p>
+		<h2>Die zeitlose Musik</h2>
+		<p>Seit dem alten Wilden Westen bis heute ist die Musik unglaublich inspirierend.</p>
+		
+		<p>Ein wohltuender Wind bläst sanft und kühlt nach einem heissen kalifornischen Sommertag. Der Geruch des aufschäumenden Ozeans kitzelt in der Nase. Palmen schmücken die staubigen Strassen und führen hoch in die Berge der Sierra und weiter zu den Nadelwälder des Redwood Forest.</p>
+		<p>Tune West macht Musik die so vielfältig ist wie der Süden Kaliforniens und verbindet sie mit ihren heimatlichen europäischen Wurzeln.
+Sieben Jahre lang musizierten sie in diversen Bluegrass-Formationen auf den Bühnen des wilden Westens.</p>
+		<p>Die akustischen Instrumente; Banjo, Fiddle, Mandoline, Gitarre und Bass kleiden die hellen klaren Stimmen. Eine Familiäre Harmonie nimmt sie auf eine Reise mit, die von Oltime Country Music bis zu modernen Folk-Kompositionen begeistert.</p>
+		<p>Möchten Sie eine Demo hören? Dan besuchen Sie uns auf CDbaby.</p>
+
+	</div>
+</section>
+<section class="site-section section-artists bg-dark">
+	<div class="section-container">
+		<h1 class="section-title">Musik Künstler</h1>
+		<div class="artists">
+			{% for artist in site.artists  %}
+				{% if page.artists contains artist.title %}
+				<article class="artist">
+					<div class="artist-image">
+						<picture width="200" height="200">
+							<img width="200" height="200" srcset="{{site.baseurl}}{{artist.image}}-sq-200.jpeg 1x, {{site.baseurl}}{{artist.image}}-sq-400.jpeg 2x" src="{{site.baseurl}}{{artist.image}}-sq-200.jpeg" alt="{{artist.title}}">
+						</picture>
+					</div>
+					<div class="artist-infos">
+						<h2 class="artist-name">{{artist.title}}</h2>
+						<ul class="artist-keywords">
+							<li>Pianobauer</li>
+							<li>Piano</li>
+							<li>Musiklehrer</li>
+							<li>Guitar</li>
+							<li>The big brother</li>
+							<li>Mandolune</li>
+						</ul>
+						<a href="{{ site.baseurl }}{{artist.url}}" class="artist-link">zum Künstler</a>
+					</div>
+				</article>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section class="site-section">
+	<div class="section-container">
+		<h1>MedienDaten</h1>
+		<ul>
+			<li><a target="blank" title="TuneWest musik mp3 demo" href="{{site.baseurl}}/audio/medley.mp3">Musik-Demo</a></li>
+			<li><a target="blank" title="TuneWest musik mp3 demo" href="{{site.baseurl}}/projekte/tunewest/bilder.zip">Bilder</a></li>
+			<li><a target="blank" title="TuneWest musik mp3 demo" href="{{site.baseurl}}/projekte/tunewest/logo.zip">Logo</a></li>
+			<li><a target="blank" title="TuneWest musik mp3 demo" href="{{site.baseurl}}/projekte/tunewest/stage-rider.pdf">Stage Rider</a></li>
+		</ul>
+	</div>
+</section>
