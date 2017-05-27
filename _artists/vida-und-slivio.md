@@ -1,3 +1,9 @@
+---
+title: Vida & Silvio
+image: /img/musiker/
+---
+
+
 ## Symbiosis ist eine Songwriter-Gemeinschaft, bestehend aus zwei Musikern.
 
 Aufgrund mehrerer Projekte sind sie ueber Jahren hinweg immer mehr zusammengewachsen und haben sich musikalisch weiter entwickelt.
