@@ -11,7 +11,7 @@ Schon früh wollte ich Geige erlernen und startete meine ersten Ambitionen im Ju
 
 Leidenschaft zum Komponieren und Arrangieren von Musik aus einem anderen Blickwinkel nachgehen konnte. Neben all den Klängen die mich in den Bann zogen, entwickelten sich noch weitere musische Interessen. Wie Tanz, Körpersprache, Körpermotorik, Rhythmik, Haltung, Gesang… Alle diese praktischen Erfahrungen fliessen stark in mein pädagogisches Wirken ein.
 
-> «Wer Musik liebt kann nie ganz unglücklich werden.» 
+> «Wer Musik liebt kann nie ganz unglücklich werden.»
 > *– Franz Schubert*
 
 

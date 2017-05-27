@@ -4,10 +4,10 @@ layout: default
 <section class="site-section section-artist">
   <div class="section-container">
 
-    <h2>{{page.name}}</h2>
-     
+    <h2>{{page.title}}</h2>
+
     <img class="img-responsive" src="{{ site.baseurl }}{{page.image}}-full.jpeg" />
-     
+
     {{ content }}
 
     {% capture artists %}{{page.collection}}{% endcapture %}
@@ -28,7 +28,7 @@ layout: default
       {% endif %}
       {% assign prev = links %}
     {% endfor %}
-     
+
     <script>
     document.body.onkeyup = function(e){
     if (e.keyCode == '37') { window.location = '{{prevurl}}'; }
@@ -40,6 +40,6 @@ layout: default
         {% if prevurl %}<li class="previous"><a href="{{prevurl}}"><span aria-hidden="true"><i class="fa fa-chevron-left"></i></span> {{prevtitle}}</a></li>{% endif %}
         {% if nexturl %}<li class="next"><a href="{{nexturl}}">{{nexttitle}} <span aria-hidden="true"><i class="fa fa-chevron-right"></i></span></a></li>{% endif %}
       </ul>
-    </nav>     
+    </nav>
   </div>
 </div>
