@@ -1,0 +1,9 @@
+name: musichub
+static_sites:
+- build_command: bundle exec jekyll build -d ./public
+  environment_slug: jekyll
+  github:
+    branch: gh-pages
+    deploy_on_push: true
+    repo: stalderstudios/musichub
+  name: musichub
